@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getApplicationContext());
             alertDialogBuilder.setTitle("Información");
             alertDialogBuilder.setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam");
+            alertDialogBuilder.setCancelable(true);
         });
     }
 }
