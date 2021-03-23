@@ -52,4 +52,36 @@
         app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <EditText
+        android:id="@+id/UserNameSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/UsernameInstruction"
+        app:layout_constraintBottom_toTopOf="@+id/PasswordSpace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserAvatar"
+        app:layout_constraintVertical_bias="0.361"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/PasswordSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="192dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/PasswordInstruction"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserNameSpace"
+        android:importantForAutofill="no" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
