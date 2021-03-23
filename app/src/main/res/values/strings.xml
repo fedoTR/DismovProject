@@ -4,4 +4,7 @@
     <string name="UsernameLogin">UsernameLogin</string>
     <string name="UsernameInstruction">Ingresa tu nombre de usuario</string>
     <string name="PasswordInstruction">Ingresa una contraseña</string>
+    <string name="InfobuttonDescription">Info button</string>
+    <string name="LanguagebuttonDescription">Language buttton</string>
+    <string name="string_infobuttondescription">Info button</string>
 </resources>
