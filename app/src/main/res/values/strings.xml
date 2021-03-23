@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DismovProject</string>
+    <string name="avatarDescription">Avatar Logo</string>
+    <string name="UsernameLogin">UsernameLogin</string>
+    <string name="UsernameInstruction">Ingresa tu nombre de usuario</string>
+    <string name="PasswordInstruction">Ingresa una contraseña</string>
 </resources>
