@@ -85,39 +85,67 @@
         android:importantForAutofill="no" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/infobutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="141dp"
         android:layout_marginLeft="141dp"
-        android:layout_marginTop="99dp"
+        android:layout_marginTop="132dp"
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
-        android:layout_marginBottom="58dp"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="@string/string_infobuttondescription"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton6"
+        app:layout_constraintEnd_toStartOf="@+id/languagebutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PasswordSpace"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/info"
-        android:contentDescription="@string/string_infobuttondescription" />
+        app:srcCompat="@drawable/info" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/languagebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
-        android:layout_marginTop="99dp"
+        android:layout_marginTop="132dp"
         android:layout_marginEnd="142dp"
         android:layout_marginRight="142dp"
-        android:layout_marginBottom="58dp"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="@string/LanguagebuttonDescription"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton5"
+        app:layout_constraintStart_toEndOf="@+id/infobutton"
         app:layout_constraintTop_toBottomOf="@+id/PasswordSpace"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/translation"
-        android:contentDescription="@string/LanguagebuttonDescription" />
+        app:srcCompat="@drawable/translation" />
+
+    <TextView
+        android:id="@+id/buttonIngresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginLeft="176dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginRight="177dp"
+        android:text="@string/IngresarButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordSpace" />
+
+    <TextView
+        android:id="@+id/buttonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="174dp"
+        android:layout_marginLeft="174dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="179dp"
+        android:layout_marginRight="179dp"
+        android:layout_marginBottom="113dp"
+        android:text="@string/NoAccInstruction"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonIngresar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,4 +7,6 @@
     <string name="InfobuttonDescription">Info button</string>
     <string name="LanguagebuttonDescription">Language buttton</string>
     <string name="string_infobuttondescription">Info button</string>
+    <string name="IngresarButton">INGRESAR</string>
+    <string name="NoAccInstruction">¿No tienes una cuenta? Regístrate aquí</string>
 </resources>
