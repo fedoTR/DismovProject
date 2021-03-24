@@ -1,6 +1,7 @@
 package com.example.dismovproject;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -30,11 +31,16 @@ public class MainActivity extends AppCompatActivity {
         Register = findViewById(R.id.buttonRegister);
 
         //Click listener of info and language buttons
-        infoButton.setOnClickListener(v -> {
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getApplicationContext());
-            alertDialogBuilder.setTitle("Información");
-            alertDialogBuilder.setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam");
-            alertDialogBuilder.setCancelable(true);
+        infoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+                dialog.setTitle("Información");
+                dialog.setMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam");
+                dialog.setCancelable(true);
+                AlertDialog alertDialog = dialog.create();
+                alertDialog.show();
+            }
         });
     }
 }
