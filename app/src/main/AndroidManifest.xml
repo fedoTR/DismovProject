@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity android:name=".Register" />
         <activity
-            android:label= "App"
-            android:name=".MainActivity" >
+            android:name=".MainActivity"
+            android:label="App">
             <intent-filter>
-                <action android:name= "android.intent.action.MAIN"/>
-                <category android:name= "android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
