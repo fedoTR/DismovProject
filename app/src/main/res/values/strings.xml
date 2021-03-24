@@ -10,4 +10,10 @@
     <string name="IngresarButton">INGRESAR</string>
     <string name="NoAccInstruction">¿No tienes una cuenta? Regístrate aquí</string>
     <string name="RegisterTitle">Registro</string>
+    <string name="UsernameRegister">Ingresa tu nombre de usuario</string>
+    <string name="PasswordRegister">Ingresa tu contraseña</string>
+    <string name="EmailRegister">Ingresa tu correo electrónico</string>
+    <string name="PasswordConfirmRegister">Confirma tu contraseña</string>
+    <string name="RegisterButton">Registrarse</string>
+    <string name="HintDate">Ingresa tu fecha de nacimiento</string>
 </resources>
