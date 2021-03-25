@@ -16,4 +16,5 @@
     <string name="PasswordConfirmRegister">Confirma tu contraseña</string>
     <string name="RegisterButton">Registrarse</string>
     <string name="HintDate">Ingresa tu fecha de nacimiento</string>
+    <string name="ContentDescription">This is a  image</string>
 </resources>

@@ -3,6 +3,7 @@ package com.example.dismovproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -19,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,    //Fullscreen
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         //Username and password fields
         UsernameField = findViewById(R.id.UserNameSpace);
         PasswordField = findViewById(R.id.PasswordSpace);
