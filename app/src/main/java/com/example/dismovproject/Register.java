@@ -109,6 +109,7 @@ public class Register extends AppCompatActivity {
                     Map<String, Object> user = new HashMap<>();
                     user.put("fullname", userName);
                     user.put("email", mail);
+
                     documentReference.set(user).addOnSuccessListener(Void -> Log.d(TAG, "User profile created for " + userName)).addOnFailureListener(e -> Log.d(TAG, "Failure" + e.toString()));
                 } else{
                     Toast.makeText(Register.this, "Error " + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();

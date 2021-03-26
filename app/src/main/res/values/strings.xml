@@ -17,4 +17,5 @@
     <string name="RegisterButton">Registrarse</string>
     <string name="HintDate">Ingresa tu fecha de nacimiento</string>
     <string name="ContentDescription">This is a  image</string>
+    <string name="mailLoginInstruction">Ingresa un correo</string>
 </resources>
