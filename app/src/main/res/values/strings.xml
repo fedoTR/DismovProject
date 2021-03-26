@@ -18,4 +18,5 @@
     <string name="HintDate">Ingresa tu fecha de nacimiento</string>
     <string name="ContentDescription">This is a  image</string>
     <string name="mailLoginInstruction">Ingresa un correo</string>
+    <string name="GoBack"><![CDATA[<- Regresar]]></string>
 </resources>

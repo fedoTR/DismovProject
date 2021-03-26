@@ -65,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
         ENTER.setOnClickListener(v -> {
             userEmail = emailField.getText().toString();
             password = PasswordField.getText().toString();
-            if (!userEmail.isEmpty() && !password.isEmpty()){
-                loginUser();
-            } else{
+            if (!userEmail.isEmpty() && !password.isEmpty()) {
+                MainActivity.this.loginUser();
+            } else {
                 Toast.makeText(MainActivity.this, "Completa los campos", Toast.LENGTH_SHORT).show();
             }
         });

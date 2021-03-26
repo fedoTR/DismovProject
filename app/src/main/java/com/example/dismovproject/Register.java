@@ -1,11 +1,14 @@
 package com.example.dismovproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +28,7 @@ public class Register extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
+    TextView goback;
 
     //Data variables that I will use
 
@@ -53,6 +57,10 @@ public class Register extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
+        //Click listener to text go back
+        goback = findViewById(R.id.gobacktext);
+        goback.setOnClickListener(v -> Register.this.OpenMain());
+
         //Click listener of register button
         buttonRegister.setOnClickListener(v -> {
             String userName = usernameRegisterField.getText().toString();
@@ -61,39 +69,39 @@ public class Register extends AppCompatActivity {
             String conpsswd = confirmPasswordRegisterField.getText().toString().trim();
             System.out.println(userName + " " + mail);
 
-            if (TextUtils.isEmpty(userName)){
+            if (TextUtils.isEmpty(userName)) {
                 usernameRegisterField.setError("Ingresa un nombre de usuario!");
                 return;
             }
 
-            if(TextUtils.isEmpty(mail)){
+            if (TextUtils.isEmpty(mail)) {
                 emailRegisterField.setError("Ingresa un correo!");
                 return;
             }
 
-            if (TextUtils.isEmpty(psswd)){
+            if (TextUtils.isEmpty(psswd)) {
                 passwordRegisterField.setError("Ingresa una contraseña!");
                 return;
             }
 
-            if (TextUtils.isEmpty(conpsswd)){
+            if (TextUtils.isEmpty(conpsswd)) {
                 confirmPasswordRegisterField.setError("Confirma tu contraseña!");
                 return;
             }
 
-            if(psswd.length() < 6){
+            if (psswd.length() < 6) {
                 passwordRegisterField.setError("La constraseña debe ser de al menos 6 caracteres!");
                 return;
             }
 
-            if (!psswd.equals(conpsswd)){
+            if (!psswd.equals(conpsswd)) {
                 confirmPasswordRegisterField.setError("Las contraseñas no coinciden!");
                 return;
             }
 
             //Register the user with FIrebase
             fAuth.createUserWithEmailAndPassword(mail, psswd).addOnCompleteListener(task -> {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     Toast.makeText(Register.this, "Usuario registrado!", Toast.LENGTH_SHORT).show();
                     userID = Objects.requireNonNull(fAuth.getCurrentUser()).getUid();
                     DocumentReference documentReference = fStore.collection("users").document(userID);
@@ -102,11 +110,19 @@ public class Register extends AppCompatActivity {
                     user.put("email", mail);
 
                     documentReference.set(user).addOnSuccessListener(Void -> Log.d(TAG, "User profile created for " + userName)).addOnFailureListener(e -> Log.d(TAG, "Failure" + e.toString()));
-                } else{
+                } else {
                     Toast.makeText(Register.this, "Error " + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
         });
 
+
+
+    }
+
+    //Go back to main page
+    private void OpenMain() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
