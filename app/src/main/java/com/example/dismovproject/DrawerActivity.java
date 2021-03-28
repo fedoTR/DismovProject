@@ -53,6 +53,7 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
         switch (menuItem.getItemId()){
             case R.id.item1:
                 Toast.makeText(getApplicationContext(), "Item 1", Toast.LENGTH_SHORT).show();
+                System.out.println("si");
                 break;
 
             case R.id.item2:
