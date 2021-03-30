@@ -14,7 +14,7 @@
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/black"
+            android:background="#C3E2A7FB"
             android:id="@+id/toolbar"
             android:elevation="4dp"/>
 
@@ -28,5 +28,13 @@
         app:menu="@menu/menu_item"
         android:layout_gravity="start"
         />
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/menu_right"
+        app:menu="@menu/second_menu"
+        android:layout_gravity="end"/>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

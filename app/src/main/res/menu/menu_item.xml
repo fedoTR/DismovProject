@@ -2,21 +2,42 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:title="item1"
+            android:title="@string/InicioDrawer"
             android:id="@+id/item1"
-            android:icon="@drawable/ic_item_foreground"/>
+            android:icon="@drawable/home"/>
 
         <item
-            android:title="item2"
+            android:title="@string/PublicationsDrawer"
             android:id="@+id/item2"
-            android:icon="@drawable/ic_item_foreground"/>
+            android:icon="@drawable/press"/>
 
         <item
-            android:title="item3"
+            android:title="@string/ImagesDrawer"
             android:id="@+id/item3"
-            android:icon="@drawable/ic_item_foreground"/>
+            android:icon="@drawable/photo"/>
 
+        <item
+            android:title="@string/ExploreDrawer"
+            android:id="@+id/item4"
+            android:icon="@drawable/group"/>
 
+    </group>
+
+    <group android:id="@+id/groupUser">
+        <item
+            android:title="@string/ProfileDrawer"
+            android:id="@+id/item5"
+            android:icon="@drawable/profile"/>
+
+        <item
+            android:title="@string/HelpDrawer"
+            android:id="@+id/item6"
+            android:icon="@drawable/information"/>
+
+        <item
+            android:title="@string/FeedbackDrawer"
+            android:id="@+id/item7"
+            android:icon="@drawable/send"/>
     </group>
 
 </menu>

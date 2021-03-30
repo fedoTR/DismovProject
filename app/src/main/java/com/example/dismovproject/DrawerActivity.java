@@ -3,6 +3,7 @@ package com.example.dismovproject;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -19,7 +20,7 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
     private static final String TAG = "DrawerActivity";
 
     private DrawerLayout drawer;
-    private NavigationView navigationView;
+    private NavigationView navigationView, secondMenu;
     private Toolbar toolbar;
 
     @Override
@@ -28,28 +29,41 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
         setContentView(R.layout.activity_drawer);
 
 
-        initViews();
+        initViews();    //Calls back initViews function
 
-        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);   //Initialize the toolbar
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.drawer_open, R.string.drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.second_menu, menu);
+        return true;
     }
 
 
+    //Initialize the views, the side menu
     private void initViews() {
         Log.d(TAG, "initViews: started");
-        drawer = (DrawerLayout)findViewById(R.id.drawer);
-        navigationView = (NavigationView)findViewById(R.id.navigation_drawer);
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
-
+        drawer = findViewById(R.id.drawer);
+        navigationView = findViewById(R.id.navigation_drawer);
+        secondMenu = findViewById(R.id.menu_right);
+        toolbar = findViewById(R.id.toolbar);
         navigationView.setNavigationItemSelectedListener(this);
+        secondMenu.setNavigationItemSelectedListener(this);
     }
 
+    //Validates for any option inside the menu
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
         switch (menuItem.getItemId()){
             case R.id.item1:
                 Toast.makeText(getApplicationContext(), "Item 1", Toast.LENGTH_SHORT).show();
@@ -57,14 +71,15 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
                 break;
 
             case R.id.item2:
-                Toast.makeText(getApplicationContext(), "Item 1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Item 2", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.item3:
-                Toast.makeText(getApplicationContext(), "Item 1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Item 3", Toast.LENGTH_SHORT).show();
                 break;
 
-
+            default:
+                throw new IllegalStateException("Unexpected value: " + menuItem.getItemId());
         }
         return false;
     }

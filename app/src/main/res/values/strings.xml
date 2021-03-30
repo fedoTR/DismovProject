@@ -33,4 +33,14 @@
 
     <string name="drawer_open">drawer_open</string>
     <string name="drawer_close">drawer_close</string>
+    <string name="exampleheadertext">Menú de navegación</string>
+    <string name="InicioDrawer">Inicio</string>
+    <string name="PublicationsDrawer">Mis publicaciones</string>
+    <string name="ImagesDrawer">Imágenes</string>
+    <string name="ExploreDrawer">Explorar</string>
+    <string name="ProfileDrawer">Mi Perfil</string>
+    <string name="HelpDrawer">Ayuda</string>
+    <string name="FeedbackDrawer">Enviar comentarios</string>
+    <string name="LanguageDrawer">Cambiar idioma</string>
+    <string name="LogoutDrawer">Cerrar sesión</string>
 </resources>
