@@ -1,6 +1,7 @@
 package com.example.dismovproject;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -14,6 +15,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.Objects;
 
 public class DrawerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -37,7 +40,7 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -65,22 +68,44 @@ public class DrawerActivity extends AppCompatActivity implements NavigationView.
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
         switch (menuItem.getItemId()){
-            case R.id.item1:
+            case R.id.inicio:
                 Toast.makeText(getApplicationContext(), "Item 1", Toast.LENGTH_SHORT).show();
                 System.out.println("si");
                 break;
 
-            case R.id.item2:
-                Toast.makeText(getApplicationContext(), "Item 2", Toast.LENGTH_SHORT).show();
+            case R.id.publicaciones:
+                Toast.makeText(getApplicationContext(), "Abriendo Mis Publicaciones", Toast.LENGTH_SHORT).show();
+                OpenPublications();
                 break;
 
-            case R.id.item3:
+            case R.id.imagenes:
                 Toast.makeText(getApplicationContext(), "Item 3", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.explorar:
+                Toast.makeText(getApplicationContext(), "Abriendo Explorar", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.miperfil:
+                Toast.makeText(getApplicationContext(), "Abriendo Mi Perfil", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.ayuda:
+                Toast.makeText(getApplicationContext(), "Abriendo Ayuda", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.comentarios:
+                Toast.makeText(getApplicationContext(), "Abriendo Enviar comentarios", Toast.LENGTH_SHORT).show();
                 break;
 
             default:
                 throw new IllegalStateException("Unexpected value: " + menuItem.getItemId());
         }
         return false;
+    }
+
+    private void OpenPublications() {
+        Intent publicaciones = new Intent(this, Publicaciones.class);
+        startActivity(publicaciones);
     }
 }

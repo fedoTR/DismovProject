@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group>
         <item
-            android:id="@+id/item8"
+            android:id="@+id/idioma"
             android:title="@string/LanguageDrawer"/>
         <item
-            android:id="@+id/item9"
+            android:id="@+id/cerrar"
             android:title="@string/LogoutDrawer"/>
     </group>
 
