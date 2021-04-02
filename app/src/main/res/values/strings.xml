@@ -7,7 +7,7 @@
     <string name="InfobuttonDescription">Info button</string>
     <string name="LanguagebuttonDescription">Language buttton</string>
     <string name="string_infobuttondescription">Info button</string>
-    <string name="IngresarButton">INGRESAR</string>
+    <string name="IngresarButton">INICIAR SESIÓN</string>
     <string name="NoAccInstruction">¿No tienes una cuenta? Regístrate aquí</string>
     <string name="RegisterTitle">Registro</string>
     <string name="UsernameRegister">Ingresa tu nombre de usuario</string>
@@ -43,4 +43,5 @@
     <string name="FeedbackDrawer">Enviar comentarios</string>
     <string name="LanguageDrawer">Cambiar idioma</string>
     <string name="LogoutDrawer">Cerrar sesión</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
 </resources>

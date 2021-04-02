@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         fAuth.signInWithEmailAndPassword(userEmail, password).addOnCompleteListener(task -> {
             if (task.isSuccessful()){
                 Toast.makeText(MainActivity.this, "Login correcto!", Toast.LENGTH_SHORT).show();
-                OpenDrawer();
+                OpenInicio();
                 //finish();
             } else{
                 Toast.makeText(MainActivity.this, "Comprueba los datos", Toast.LENGTH_SHORT).show();
@@ -90,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void OpenDrawer() {
-        Intent intent = new Intent(this, DrawerActivity.class);
+    private void OpenInicio() {
+        Intent intent = new Intent(this, NavigationDrawer.class);
         startActivity(intent);
     }
 

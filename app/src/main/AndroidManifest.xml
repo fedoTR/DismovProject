@@ -11,8 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:ignore="AllowBackup">
-        <activity android:name=".Publicaciones" />
-        <activity android:name=".DrawerActivity" />
+        <activity
+            android:name=".NavigationDrawer"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
         <activity android:name=".Register" />
         <activity
             android:name=".MainActivity"
