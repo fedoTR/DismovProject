@@ -52,4 +52,13 @@
     <string name="fragment_miperfil">Mi Perfil</string>
     <string name="fragment_ayuda">Ayuda</string>
     <string name="fragment_feedback">Enviar opiniones</string>
+    <string name="TitlePublicaciones">Publicaciones de esta semana</string>
+    <string name="ImagenesTitle">Tíulo de imagen (Fecha)</string>
+    <string name="AuthorImages">Subida por: Example</string>
+
+    <!--Array para el spinner de mis publicaciones-->
+    <string-array name="orderPublicaciones">
+        <item>Fecha de subida: Ascendente</item>
+        <item>Fecha de subida: Descendente</item>
+    </string-array>
 </resources>

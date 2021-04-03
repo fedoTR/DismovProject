@@ -15,7 +15,7 @@
         android:id="@+id/nav_imagenes"
         android:name="com.example.dismovproject.ui.imagenes.ImagenesFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_publicaciones" />
+        tools:layout="@layout/fragment_imagenes" />
 
     <fragment
         android:id="@+id/nav_publicaciones"
