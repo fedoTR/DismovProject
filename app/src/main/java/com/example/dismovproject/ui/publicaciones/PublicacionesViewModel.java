@@ -1,16 +1,16 @@
-package com.example.dismovproject.ui.gallery;
+package com.example.dismovproject.ui.publicaciones;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class PublicacionesViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public PublicacionesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is publicaciones fragment");
     }
 
     public LiveData<String> getText() {
