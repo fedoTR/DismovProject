@@ -27,4 +27,19 @@
         android:name="com.example.dismovproject.ExplorarFragment"
         android:label="@string/fragment_explorarr"
         tools:layout="@layout/fragment_explorar" />
+    <fragment
+        android:id="@+id/miperfilFragment"
+        android:name="com.example.dismovproject.miperfilFragment"
+        android:label="@string/fragment_miperfil"
+        tools:layout="@layout/fragment_miperfil" />
+    <fragment
+        android:id="@+id/ayudaFragment"
+        android:name="com.example.dismovproject.ayudaFragment"
+        android:label="@string/fragment_ayuda"
+        tools:layout="@layout/fragment_ayuda" />
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.example.dismovproject.feedbackFragment"
+        android:label="@string/fragment_feedback"
+        tools:layout="@layout/fragment_feedback" />
 </navigation>

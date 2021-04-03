@@ -28,17 +28,17 @@
     <group android:id="@+id/groupUser">
         <item
             android:title="@string/ProfileDrawer"
-            android:id="@+id/miperfil"
+            android:id="@+id/miperfilFragment"
             android:icon="@drawable/profile"/>
 
         <item
             android:title="@string/HelpDrawer"
-            android:id="@+id/ayuda"
+            android:id="@+id/ayudaFragment"
             android:icon="@drawable/information"/>
 
         <item
             android:title="@string/FeedbackDrawer"
-            android:id="@+id/comentarios"
+            android:id="@+id/feedbackFragment"
             android:icon="@drawable/send"/>
     </group>
 
