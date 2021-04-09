@@ -36,12 +36,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerPublicaciones">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/TitlePublicaciones"
             android:textColor="@color/white"
             android:gravity="center"
-            android:autoSizeTextType="uniform"/>
+            app:autoSizeTextType="uniform"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
