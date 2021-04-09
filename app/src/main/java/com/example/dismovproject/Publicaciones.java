@@ -1,9 +1,6 @@
 package com.example.dismovproject;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
-import android.os.Bundle;
-
-public class Publicaciones extends DrawerActivity {
-
+public class Publicaciones extends Activity {
 }
