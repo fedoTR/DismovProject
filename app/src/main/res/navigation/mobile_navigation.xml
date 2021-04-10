@@ -3,43 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_inicio">
+    app:startDestination="@id/inicioFragment">
+
 
     <fragment
-        android:id="@+id/nav_inicio"
-        android:name="com.example.dismovproject.ui.inicio.InicioFragment"
-        android:label="@string/menu_home"
+        android:id="@+id/inicioFragment"
+        android:name="com.example.dismovproject.inicioFragment"
+        android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" />
 
     <fragment
-        android:id="@+id/nav_imagenes"
-        android:name="com.example.dismovproject.ui.imagenes.ImagenesFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_imagenes" />
-
+        android:id="@+id/publicacionesFragment"
+        android:name="com.example.dismovproject.publicacionesFragment"
+        android:label="fragment_publicaciones"
+        tools:layout="@layout/fragment_publicaciones" />
     <fragment
-        android:id="@+id/nav_publicaciones"
-        android:name="com.example.dismovproject.ui.publicaciones.PublicacionesFragment"
-        android:label="@string/menu_slideshow"
+        android:id="@+id/imagenesFragment"
+        android:name="com.example.dismovproject.imagenesFragment"
+        android:label="fragment_imagenes"
         tools:layout="@layout/fragment_imagenes" />
     <fragment
         android:id="@+id/explorarFragment"
-        android:name="com.example.dismovproject.ExplorarFragment"
-        android:label="@string/fragment_explorarr"
+        android:name="com.example.dismovproject.explorarFragment"
+        android:label="fragment_explorar"
         tools:layout="@layout/fragment_explorar" />
     <fragment
         android:id="@+id/miperfilFragment"
         android:name="com.example.dismovproject.miperfilFragment"
-        android:label="@string/fragment_miperfil"
+        android:label="fragment_miperfil"
         tools:layout="@layout/fragment_miperfil" />
     <fragment
         android:id="@+id/ayudaFragment"
         android:name="com.example.dismovproject.ayudaFragment"
-        android:label="@string/fragment_ayuda"
+        android:label="fragment_ayuda"
         tools:layout="@layout/fragment_ayuda" />
     <fragment
         android:id="@+id/feedbackFragment"
         android:name="com.example.dismovproject.feedbackFragment"
-        android:label="@string/fragment_feedback"
+        android:label="fragment_feedback"
         tools:layout="@layout/fragment_feedback" />
+
 </navigation>

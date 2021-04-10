@@ -5,17 +5,17 @@
     <group android:checkableBehavior="single">
         <item
             android:title="@string/InicioDrawer"
-            android:id="@+id/nav_inicio"
+            android:id="@+id/inicioFragment"
             android:icon="@drawable/home"/>
 
         <item
             android:title="@string/PublicationsDrawer"
-            android:id="@+id/nav_publicaciones"
+            android:id="@+id/publicacionesFragment"
             android:icon="@drawable/press"/>
 
         <item
             android:title="@string/ImagesDrawer"
-            android:id="@+id/nav_imagenes"
+            android:id="@+id/imagenesFragment"
             android:icon="@drawable/photo"/>
 
         <item
@@ -25,7 +25,8 @@
 
     </group>
 
-    <group android:id="@+id/groupUser">
+    <group android:id="@+id/groupUser"
+        android:checkableBehavior="single">
         <item
             android:title="@string/ProfileDrawer"
             android:id="@+id/miperfilFragment"
