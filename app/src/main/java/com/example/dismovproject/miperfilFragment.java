@@ -1,12 +1,24 @@
 package com.example.dismovproject;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Objects;
+
+import static com.example.dismovproject.Register.TAG;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,16 +61,66 @@ public class miperfilFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_miperfil, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_miperfil, container, false);
+
+        FirebaseFirestore fStore;
+        FirebaseAuth fAuth;
+        String userID;
+        TextView usermailField, fullnameFiled;
+
+        //Firebase instances
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+
+        //Instance textviews
+        usermailField = view.findViewById(R.id.usermailField);
+        fullnameFiled = view.findViewById(R.id.fullnameField);
+
+        userID = Objects.requireNonNull(fAuth.getCurrentUser()).getUid();
+        if(userID == null){
+            try {
+                throw new IllegalAccessException("No has iniciado sesión");
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        }
+        //DocumentReference documentReference = fStore.collection("users").document(userID);
+
+        DocumentReference documentReference = fStore.collection("users").document(userID);
+        documentReference.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    Log.d(TAG, "DocumentSnapshot data: " + document.getData());
+                    usermailField.setText((CharSequence) document.get("email"));
+                    fullnameFiled.setText((CharSequence) document.get("fullname"));
+                } else {
+                    Log.d(TAG, "No such document");
+                }
+            } else {
+                Log.d(TAG, "get failed with ", task.getException());
+            }
+        });
+
+
+
+
+
+        return view;
     }
 }

@@ -1,9 +1,13 @@
 <component name="ProjectDictionaryState">
   <dictionary name="fedot">
     <words>
+      <w>fullname</w>
+      <w>goback</w>
       <w>gobacktext</w>
       <w>inicio</w>
+      <w>miperfil</w>
       <w>publicaciones</w>
+      <w>usermail</w>
       <w>usuario</w>
     </words>
   </dictionary>
