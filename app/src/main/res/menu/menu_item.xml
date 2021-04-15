@@ -3,10 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
-        <item
-            android:title="@string/InicioDrawer"
-            android:id="@+id/inicioFragment"
-            android:icon="@drawable/home"/>
 
         <item
             android:title="@string/PublicationsDrawer"

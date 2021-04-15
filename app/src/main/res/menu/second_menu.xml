@@ -3,10 +3,12 @@
     <group>
         <item
             android:id="@+id/idioma"
-            android:title="@string/LanguageDrawer"/>
+            android:title="@string/LanguageDrawer"
+            android:onClick="showChangeLanguageDialog"/>
         <item
             android:id="@+id/cerrar"
-            android:title="@string/LogoutDrawer"/>
+            android:title="@string/LogoutDrawer"
+            android:onClick="logout"/>
     </group>
 
 </menu>

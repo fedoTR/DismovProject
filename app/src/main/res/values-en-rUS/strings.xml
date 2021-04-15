@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DismovProject</string>
+    <string name="UsernameInstruction">Enter your username</string>
+    <string name="PasswordInstruction">Enter a password</string>
+    <string name="IngresarButton">LOGIN</string>
+    <string name="NoAccInstruction">Don\'t you have an account? Register here!</string>
+    <string name="UsernameRegister">Enter a username</string>
+    <string name="PasswordRegister">Enter a password</string>
+    <string name="EmailRegister">Enter a mail</string>
+    <string name="PasswordConfirmRegister">Confirm your password</string>
+    <string name="RegisterButton">Sign Up</string>
+    <string name="HintDate">Enter your birthday date</string>
+    <string name="mailLoginInstruction">Enter a mail</string>
+    <string name="menu_gallery">Images</string>
+    <string name="menu_slideshow">My publications</string>
+    <string name="InicioDrawer">Home</string>
+    <string name="PublicationsDrawer">My publications</string>
+    <string name="ImagesDrawer">Images</string>
+    <string name="ExploreDrawer">Explore</string>
+    <string name="ProfileDrawer">My profile</string>
+    <string name="HelpDrawer">Help</string>
+    <string name="FeedbackDrawer">Send feedback</string>
+    <string name="LanguageDrawer">Change language</string>
+    <string name="LogoutDrawer">Sign Out</string>
+    <string name="fragment_feedback">Send feedback</string>
+    <string name="TitlePublicaciones">Publications of the week</string>
+    <string name="Publicacionesnuevas">New publications</string>
+    <string name="RegisterTitle">Sign Up</string>
+    <string name="GoBack"><![CDATA[<- Back]]></string>
+</resources>

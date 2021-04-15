@@ -22,4 +22,6 @@ public class publicacionesFragment extends Fragment {
     public publicacionesFragment(){
 
     }
+
+
 }
